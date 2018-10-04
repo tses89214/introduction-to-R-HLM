@@ -1,6 +1,6 @@
 
 
-# ½Ğ¥ı°õ¦æ¤U¦C´X¦æ
+# ä¸Šèª²å‰è«‹å…ˆåŸ·è¡Œä¸‹åˆ—å¹¾è¡Œ
 
 
 # -----------------------------------
@@ -14,9 +14,9 @@ install.packages("psych")
 library(psych)
 install.packages("Matrix")
 library(Matrix)
-#¦pªGConsole¨S¦³¥X²{¥ô¦ó¥H"Error: ......"¶}ÀYªº°T®§´N¬OOK©Ô
-#¦pªG¬O»¡ "suggested packages¨S¦w¸Ë.." ¨SÃö«Y¨º¤£­«­n¡C
-#´N¥i¥HÃö°_¨Ó¤F¡A¤£¥Î¯S§OÀx¦s¤°»ò
+#å¦‚æœConsoleæ²’æœ‰å‡ºç¾ä»»ä½•ä»¥"Error: ......"é–‹é ­çš„è¨Šæ¯å°±æ˜¯OKæ‹‰
+#å¦‚æœæ˜¯èªª "suggested packagesæ²’å®‰è£.." æ²’é—œä¿‚é‚£ä¸é‡è¦ã€‚
+#å°±å¯ä»¥é—œèµ·ä¾†äº†ï¼Œä¸ç”¨ç‰¹åˆ¥å„²å­˜ä»€éº¼
 
 #-----------------------------------
 
@@ -27,32 +27,32 @@ library(Matrix)
 
 
 
-#-----    R ªº¥|­Ó®Ø®Ø    ----------
+#-----    R çš„å››å€‹æ¡†æ¡†    ----------
 
 
 
-#-----    µ{¦¡»y¨¥ªº°ò¥»ÅŞ¿è   -----
+#-----    ç¨‹å¼èªè¨€çš„åŸºæœ¬é‚è¼¯   -----
 
   #variable  e.g: a,b,c
 
   #function  e.g. + - , t-test() .... 
 
-  #°O¾ĞÅé»PÀx¦s
+  #è¨˜æ†¶é«”èˆ‡å„²å­˜
 
 
 
-#-----    R ªº°ò¥»¾Ş§@    ----------
+#-----    R çš„åŸºæœ¬æ“ä½œ    ----------
 
-  #¼ÆºØ¸ê®Æµ²ºc¡Gnum¼Æ­È chr¦r¦ê boolean/logic¥¬ªL­È 
+  #æ•¸ç¨®è³‡æ–™çµæ§‹ï¼šnumæ•¸å€¼ chrå­—ä¸² boolean/logicå¸ƒæ—å€¼ 
   #vector, factor, list, dataframe
 a = 1
 b = "b"
 c = T
 
-factor1 = c("¤j","¤¤","¤p")     #¥u¬O¤T­Óchr ºÙ¬°Vector
+factor1 = c("å¤§","ä¸­","å°")     #åªæ˜¯ä¸‰å€‹chr ç¨±ç‚ºVector
 factor1 = as.factor(factor1)
 
-BigList = c(a,b,c)             #¨ÌµM¥u¬O¤T­Óchr  ¤]¬OVector
+BigList = c(a,b,c)             #ä¾ç„¶åªæ˜¯ä¸‰å€‹chr  ä¹Ÿæ˜¯Vector
 BigList = list(a,b,c)
 
 vec = c("a","b","c","d")
@@ -72,7 +72,7 @@ dta$Length2
 
 
 
-#-----    §Ö³t¶]¹L¥H«e·|ªº²Î­p    ----------
+#-----    å¿«é€Ÿè·‘éä»¥å‰æœƒçš„çµ±è¨ˆ    ----------
 
 
 
@@ -82,17 +82,17 @@ dta<-data.frame(gender=rep(c("F","M"),each=10),
                 weight=c(117,125,133,141,149,109,128,131,131,145,
                          211,223,235,247,259,201,228,245,241,269))
 ?rep
-#¬ÛÃö
+#ç›¸é—œ
 cor(dta$height,dta$weight)
 
-#tÀË©w
+#tæª¢å®š
 x = dta$weight[dta$gender=="F"]
 y = dta$weight[dta$gender=="M"]
 
-t.test(x,y)  # ¤£ª¾¹D«ç»ò©ñ´N¥´°İ¸¹
+t.test(x,y)  # ä¸çŸ¥é“æ€éº¼æ”¾å°±æ‰“å•è™Ÿ
 ?t.test
 
-#°jÂk
+#è¿´æ­¸
 lm(height~weight,data = dta)
 lm_result = lm(height~weight,data = dta)
 summary(lm_result)
@@ -103,21 +103,21 @@ summary(aov_result)
 
 #-------------    HLM    --------------------
 dta<-import("5L3.sav")
-View(dta)  #¾ãÅé¬İ
-names(dta) #¬İ¼ĞÃD
-head(dta)  #¬İ«e6
-is.na(dta) #ªÅ­È
-sum(is.na(dta)) #¬O§_¦³na
-dta[dta=="1"]  #¦pªG¦³ªº¸Ü(À³¸Ó)
+View(dta)  #æ•´é«”çœ‹
+names(dta) #çœ‹æ¨™é¡Œ
+head(dta)  #çœ‹å‰6
+is.na(dta) #ç©ºå€¼
+sum(is.na(dta)) #æ˜¯å¦æœ‰na
+dta[dta=="1"]  #å¦‚æœæœ‰çš„è©±(æ‡‰è©²)
 summary(dta)
-sd(dta$achievement,na.rm = T)  #¥i¥H¸õ¹LNA
+sd(dta$achievement,na.rm = T)  #å¯ä»¥è·³éNA
 
 
 
-#¶qªí³B²z¥H«á¦A»¡§a
+#é‡è¡¨è™•ç†ä»¥å¾Œå†èªªå§
 #HLM
  
-#R»PSPSSªºHLM¡A¤£·|¯S§O¤Àlevel¡A©Ò¥H­n±q¸ê®Æ¤WµÛ¤â 
+#Rèˆ‡SPSSçš„HLMï¼Œä¸æœƒç‰¹åˆ¥åˆ†levelï¼Œæ‰€ä»¥è¦å¾è³‡æ–™ä¸Šè‘—æ‰‹ 
 #NULL MODEL
 m1 <- lme(achievement~1,random = ~1|id2,data = dta)
 summary(m1)
@@ -128,7 +128,7 @@ VarCorr(m1)
 m2 <- lme(achievement~minority+gender+ses,random = ~minority+gender+ses|id2,data = dta)
 summary(m2)
 
-#»s§@levle2ÅÜ¶µ
+#è£½ä½œlevle2è®Šé …
 MeanSes_School <- tapply(dta$ses,dta$id2,mean)
 MeanSes_lv1 <-MeanSes_School[as.character(dta$id2)]
 dta$MeanSes_school <- MeanSes_lv1
@@ -139,11 +139,11 @@ summary(m3)
 
 
 
-#¦]¯À¤ÀªR
+#å› ç´ åˆ†æ
 efadata <- read.table("http://www.obhrm.net/data/ex4.1a.dat")     
 names(efadata) <-c(paste("y", 1:12, sep=""))                
 
 fa.parallel(efadata, n.iter=100,main="Scatter Plot")   
-f4 <- fa(efadata,4,rotate="varimax")                       #¦]¯À¤ÀªR¡A¥|­Ó¦]¯À¡A¥¿¥æ±ÛÂà
+f4 <- fa(efadata,4,rotate="varimax")                       #å› ç´ åˆ†æï¼Œå››å€‹å› ç´ ï¼Œæ­£äº¤æ—‹è½‰
 load = loadings(f4)
 print(load,sort=TRUE,digits=2)  
